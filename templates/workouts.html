@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKafagym App</title>
+</head>
+<body>
+    {% for workout in workouts %}
+        {{ workout.workout_name }}<br>
+        {{ workout.set_name }}<br>
+        {{ workout.workout_description }}<br>
+        {{ workout.date }}<br>
+    {% endfor %}
+</body>
+</html>
