@@ -3,15 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="descrription" content="eKafagym - a progress web based app for gym members">
+    <meta name="author" content="Fabrice Karenzi">
+    <title>eKafagym App</title>
+
+    <!-- Styles -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
     {% block styles %}
     {% endblock %}
-    <title>eKafagym</title>
 </head>
 <body>
 
+    <header>
+        <!-- top navigation bar -->
+        <nav class="nav-bar nav-extended text-shadow style-nav">
+            <div class="nav-wrapper">
+            <a href="{{ url_for('get_workouts') }}" class="navbar-brand"><img src="static/images/KafaGym-logo.png" alt="KafaGym logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="nav-link" href="{{ url_for('get_workouts') }}">Home</a></li>
+                <li><a class="nav-link" href="#">My Account</a></li>
+                <li><a class="nav-link" href="#">Add Workout</a></li>
+                <li><a class="nav-link" href="#">Sets</a></li>
+                <li><a class="nav-link" href="#">Log Out</a></li>
+                <li><a class="nav-link" href="#">Log In</a></li>
+                <li><a class="nav-link" href="#">Sign Up</a></li>
+            </ul>
+            </div>
+        </nav>
+
+         <!--mobile sidenavigation bar  -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="sidenav-style">Workouts</h4></li>
+            <li><a class="nav-link" href="{{ url_for('get_workouts') }}">Home</a></li>
+                <li><a class="nav-link" href="#">My Account</a></li>
+                <li><a class="nav-link" href="#">Add Workout</a></li>
+                <li><a class="nav-link" href="#">Sets</a></li>
+                <li><a class="nav-link" href="#">Log Out</a></li>
+                <li><a class="nav-link" href="#">Log In</a></li>
+                <li><a class="nav-link" href="#">Sign Up</a></li>
+        </ul>
+    </header>
     {% block content %}
 
     {% endblock %}

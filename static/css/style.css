@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #DCDDDE;
+}
+
+/* Navigation */
+
+.style-nav {
+    background-color: #4B4D4F;
+    border-bottom: #F7941E 3px solid;
+    padding-top: 10px;
+    min-height: 50px;
+}
+
+.navbar-brand img {
+    width: 170px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.sidenav-style {
+    color: #F7941E;
+}
+
+
