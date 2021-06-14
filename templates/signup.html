@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
      
-    <h3 class="center-align titles">Sign Up to become a member</h3>
+    <h3 class="center-align titles">Become a member</h3>
 
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signup') }}">
@@ -10,22 +10,30 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix signUp-style"></i>
-                        <input id="username" name="username" type="text" class="validate">
-                        <label for="username">Username</label>
+                        <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="username" required>Username</label>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-plus prefix signUp-style"></i>
+                        <input id="email" name="email" type="text" class="validate" required>
+                        <label for="email">Email</label>
                     </div>
                 </div>
                 <!-- Password -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock prefix signUp-style"></i>
-                        <input id="password" name="password" type="password" class="validate">
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
                     </div>
                 </div>
                 <!-- Sign Up -->
                 <div class="row">
                     <button type="submit" class="btn col s12 btn-large text-shadow links">
-                        Sign Up <div class="i fas fa-sign-in-alt"></div>
+                        Sign Up <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
             </div>

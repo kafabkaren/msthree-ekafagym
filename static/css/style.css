@@ -18,13 +18,17 @@ body {
     background-color: #4B4D4F;
 }
 
-.btn a:hover {
+/* .btn a:hover {
     color: #F7941E;
     background-color: #4B4D4F;
-}
+} */
 
 .titles {
     color: #F7941E;
+}
+
+.signUp-style {
+    background-color: #bdbdbd;
 }
 
 /* Navigation */

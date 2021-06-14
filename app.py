@@ -27,6 +27,25 @@ def get_workouts():
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
+    if request.method == "POST":
+        # username existance status from the DB
+        existing_user = mongo.db.user.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username has been taken!")
+            return redirect(url_for("signup"))
+
+        signup = {
+            "username": request.form.get("username").lower(),
+            "email": request.form.get("email").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(signup)           
+
+        # put new user in 'session'cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Sign up successful!")
     return render_template("signup.html")
 
 
