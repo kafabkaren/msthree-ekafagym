@@ -7,6 +7,26 @@ body {
     background-color: #DCDDDE;
 }
 
+/* Globla rules */
+
+.links {
+    font-weight: bold;
+}
+
+.btn {
+    color: #F7941E;
+    background-color: #4B4D4F;
+}
+
+.btn a:hover {
+    color: #F7941E;
+    background-color: #4B4D4F;
+}
+
+.titles {
+    color: #F7941E;
+}
+
 /* Navigation */
 
 .style-nav {
@@ -18,7 +38,7 @@ body {
 
 .navbar-brand img {
     width: 170px;
-    padding-left: 50px;
+    padding-left: 20px;
     padding-top: 10px;
 }
 

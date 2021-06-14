@@ -23,32 +23,33 @@
         <!-- top navigation bar -->
         <nav class="nav-bar nav-extended text-shadow style-nav">
             <div class="nav-wrapper">
-            <a href="{{ url_for('get_workouts') }}" class="navbar-brand"><img src="static/images/KafaGym-logo.png" alt="KafaGym logo"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="nav-link" href="{{ url_for('get_workouts') }}">Home</a></li>
-                <li><a class="nav-link" href="#">My Account</a></li>
-                <li><a class="nav-link" href="#">Add Workout</a></li>
-                <li><a class="nav-link" href="#">Sets</a></li>
-                <li><a class="nav-link" href="#">Log Out</a></li>
-                <li><a class="nav-link" href="#">Log In</a></li>
-                <li><a class="nav-link" href="#">Sign Up</a></li>
-            </ul>
+                <a href="{{ url_for('get_workouts') }}" class="navbar-brand"><img src="static/images/KafaGym-logo.png" alt="KafaGym logo"></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class="nav-link" href="{{ url_for('get_workouts') }}">Home</a></li>
+                        <li><a class="nav-link" href="#">My Account</a></li>
+                        <li><a class="nav-link" href="#">Add Workout</a></li>
+                        <li><a class="nav-link" href="#">Sets</a></li>
+                        <li><a class="nav-link" href="#">Log Out</a></li>
+                        <li><a class="nav-link" href="#">Log In</a></li>
+                        <li><a class="nav-link" href="{{ url_for('signup') }}">Sign Up</a></li>
+                    </ul>
             </div>
         </nav>
 
          <!--mobile sidenavigation bar  -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="sidenav-style">Workouts</h4></li>
+            <li><h4 class="sidenav-style center-align">Workouts</h4></li>
             <li><a class="nav-link" href="{{ url_for('get_workouts') }}">Home</a></li>
-                <li><a class="nav-link" href="#">My Account</a></li>
-                <li><a class="nav-link" href="#">Add Workout</a></li>
-                <li><a class="nav-link" href="#">Sets</a></li>
-                <li><a class="nav-link" href="#">Log Out</a></li>
-                <li><a class="nav-link" href="#">Log In</a></li>
-                <li><a class="nav-link" href="#">Sign Up</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a class="nav-link" href="#">Add Workout</a></li>
+            <li><a class="nav-link" href="#">Sets</a></li>
+            <li><a class="nav-link" href="#">Log Out</a></li>
+            <li><a class="nav-link" href="#">Log In</a></li>
+            <li><a class="nav-link" href="{{ url_for('signup') }}">Sign Up</a></li>
         </ul>
     </header>
+
     {% block content %}
 
     {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+     
+    <h3 class="center-align titles">Sign Up to become a member</h3>
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signup') }}">
+            <div class="card-panel">
+                <!-- Username -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-plus prefix signUp-style"></i>
+                        <input id="username" name="username" type="text" class="validate">
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-lock prefix signUp-style"></i>
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <!-- Sign Up -->
+                <div class="row">
+                    <button type="submit" class="btn col s12 btn-large text-shadow links">
+                        Sign Up <div class="i fas fa-sign-in-alt"></div>
+                    </button>
+                </div>
+            </div>
+        </form>
+  </div>
+
+{% endblock %}
+
