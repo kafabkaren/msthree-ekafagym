@@ -90,8 +90,8 @@ def profile(username):
     return redirect(url_for("signin"))
 
 
-@app.route("/logout")
-def logout():
+@app.route("/signout")
+def signout():
     # remove user from session cookies
     flash("Session logged out")
     session.pop("user")
