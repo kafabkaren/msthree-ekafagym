@@ -42,7 +42,12 @@ body {
     padding-top: 10px;
 }
 
-.nav-link {
+#mobile-demo .nav-link {
+    font-weight: bold;
+    color: #4B4D4F;
+}
+
+#top-navbar .nav-link {
     font-weight: bold;
 }
 
