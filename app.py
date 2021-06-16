@@ -50,8 +50,8 @@ def signup():
     return render_template("signup.html")
 
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/signin", methods=["GET", "POST"])
+def signin():
     if request.method == "POST":
         # username existance status from the DB
         existing_user = mongo.db.users.find_one(
@@ -68,14 +68,14 @@ def login():
             else:
                 # password missmatch
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for('login'))
+                return redirect(url_for('signin'))
 
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+            return redirect(url_for("signin"))
     
-    return render_template("login.html")
+    return render_template("signin.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -87,7 +87,7 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for("login"))
+    return redirect(url_for("signin"))
 
 
 @app.route("/logout")
@@ -95,7 +95,7 @@ def logout():
     # remove user from session cookies
     flash("Session logged out")
     session.pop("user")
-    return redirect(url_for("login"))
+    return redirect(url_for("signin"))
 
 
 if __name__ == "__main__":
