@@ -18,11 +18,6 @@ body {
     background-color: #4B4D4F;
 }
 
-/* .btn a:hover {
-    color: #F7941E;
-    background-color: #4B4D4F;
-} */
-
 .titles {
     color: #F7941E;
     font-weight: bold;
@@ -52,6 +47,13 @@ body {
 }
 
 .sidenav-style {
+    color: #F7941E;
+}
+
+/* Collapsible */
+
+.collapsible-style {
+    background-color: #4B4D4F;
     color: #F7941E;
 }
 
