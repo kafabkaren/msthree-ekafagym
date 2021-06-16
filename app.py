@@ -29,10 +29,10 @@ def get_workouts():
 def signup():
     if request.method == "POST":
         # username existance status from the DB
-        existing_user = mongo.db.user.find_one(
+        existing_member = mongo.db.member.find_one(
             {"username": request.form.get("username").lower()})
 
-        if existing_user:
+        if existing_member:
             flash("Username has been taken!")
             return redirect(url_for("signup"))
 
@@ -41,12 +41,12 @@ def signup():
             "email": request.form.get("email").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(signup)           
+        mongo.db.members.insert_one(signup)           
 
-        # put new user in 'session'cookie
-        session["user"] = request.form.get("username").lower()
+        # put new member in 'session'cookie
+        session["member"] = request.form.get("username").lower()
         flash("Sign up successful!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("profile", username=session["member"]))
     return render_template("signup.html")
 
 
@@ -54,17 +54,17 @@ def signup():
 def signin():
     if request.method == "POST":
         # username existance status from the DB
-        existing_user = mongo.db.users.find_one(
+        existing_member = mongo.db.members.find_one(
             {"username": request.form.get("username").lower()})
 
-        if existing_user:
-            # check if hashed password matches user input
+        if existing_member:
+            # check if hashed password matches member input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
+                existing_member["password"], request.form.get("password")):
+                    session["member"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(url_for(
-                        "profile", username=session["user"]))
+                        "profile", username=session["member"]))
             else:
                 # password missmatch
                 flash("Incorrect Username and/or Password")
@@ -80,11 +80,11 @@ def signin():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # retrieve the session user's username from DB
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    # retrieve the session member's username from DB
+    username = mongo.db.members.find_one(
+        {"username": session["member"]})["username"]
     
-    if session["user"]:
+    if session["member"]:
         return render_template("profile.html", username=username)
 
     return redirect(url_for("signin"))
@@ -92,9 +92,9 @@ def profile(username):
 
 @app.route("/signout")
 def signout():
-    # remove user from session cookies
+    # remove member from session cookies
     flash("Session logged out")
-    session.pop("user")
+    session.pop("member")
     return redirect(url_for("signin"))
 
 
