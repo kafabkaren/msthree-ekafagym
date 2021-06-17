@@ -2,18 +2,39 @@
 {% block content %}
     <h4 class="titles text-darken-2 center-align text-shadow">Add Workout</h4>
 
-    <div class="row">
+    <div class="row card-panel">
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-dumbbell prefix grey-text text-darken-3"></i>
-                <input id="add_workout" name="add_workout" type="text" class="validate">
-                <label for="add_workout">Workout Name</label>
+                <input id="workout_name" name="workout_name" minlength="5" maxlength="40" type="text" class="validate" required>
+                <label for="workout_name">Workout Name</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
-                <i class="fas fa-dumbbell prefix grey-text text-darken-3"></i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Telephone</label>
+                <i class="fas fa-clipboard-list prefix grey-text text-darken-3"></i>
+                <textarea id="workout_instructions" name="workout_instructions" minlength="5" maxlength="180" class="materialize-textarea validate" required></textarea>
+                <label for="workout_instructions">Workout Instructions</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix grey-text text-darken-3"></i>
+                <input id="date" name="date" type="text" class="datepicker validate" required>
+                <label for="date">Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col 12">
+                    <div class="switch">
+                        <i class="fas fa-exclamation-triangle prefix grey-text text-darken-3"></i>
+                        <label for="is_important">
+                                <input type="checkbox"  id="is_important" name="is_important">
+                                <span class="lever"></span>
+                                Is Important
+                            </label>
+                    </div>
                 </div>
             </div>
         </form>
