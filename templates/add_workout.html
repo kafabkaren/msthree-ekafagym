@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h4 class="titles text-darken-2 center-align text-shadow">Add Workout</h4>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-dumbbell prefix grey-text text-darken-3"></i>
+                <input id="add_workout" name="add_workout" type="text" class="validate">
+                <label for="add_workout">Workout Name</label>
+                </div>
+                <div class="input-field col s12">
+                <i class="fas fa-dumbbell prefix grey-text text-darken-3"></i>
+                <input id="icon_telephone" type="tel" class="validate">
+                <label for="icon_telephone">Telephone</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
