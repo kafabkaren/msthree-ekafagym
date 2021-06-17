@@ -9,7 +9,7 @@
                 <!-- Username -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix signUp-style"></i>
+                        <i class="fas fa-user-plus prefix grey-text text-darken-3"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="username" required>Username</label>
                     </div>
@@ -17,7 +17,7 @@
                 <!-- Email -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-envelope prefix signUp-style"></i>
+                        <i class="fas fa-envelope prefix grey-text text-darken-3"></i>
                         <input id="email" name="email" type="text" class="validate" required>
                         <label for="email">Email</label>
                     </div>
@@ -25,7 +25,7 @@
                 <!-- Password -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-lock prefix signUp-style"></i>
+                        <i class="fas fa-user-lock prefix grey-text text-darken-3"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
                     </div>
@@ -43,7 +43,7 @@
   <div class="row">
       <div class="col s12">
           <p class="center-align">
-              Already a member? <a href="{{ url_for('signin') }}" class="titles">Sign in</a>.
+              Already a member? <a href="{{ url_for('signin') }}" class="titles"><b>Sign in</b></a>.
           </p>
       </div>
   </div>
