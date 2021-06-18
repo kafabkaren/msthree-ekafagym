@@ -98,9 +98,24 @@ def signout():
     return redirect(url_for("signin"))
 
 
-@app.route("/add_workout")
+@app.route("/add_workout", methods=["GET", "POST"])
 def add_workout():
-    return render_template("add_workout.html")
+    if request.method == "POST":
+        is_important = "on" if request.form.get("is_important") else "off"
+        workout = {
+            "workout_plan_name": request.form.get("workout_plan_name"),
+            "workout_name": request.form.get("workout_name"),
+            "workout_instructions": request.form.get("workout_instructions"),
+            "is_important": is_important,
+            "date": request.form.get("date"),
+            "creaded_by": session["member"]
+        }
+        mongo.db.workouts.insert_one(workout)
+        flash("Workout Added!")
+        return redirect(url_for("get_workouts"))
+
+    workout_plans = mongo.db.workout_plans.find().sort("workout_plan_name", 1)
+    return render_template("add_workout.html", workout_plans=workout_plans)
 
 
 if __name__ == "__main__":

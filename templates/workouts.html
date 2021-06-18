@@ -1,26 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for workout in workouts %}
-        {{ workout.workout_name }}<br>
-        {{ workout.set_name }}<br>
-        {{ workout.workout_description }}<br>
-        {{ workout.date }}<br>
-    {% endfor %}
+    <h4 class="titles text-darken-2 center-align text-shadow">All Workouts</h4>
 
     <ul class="collapsible">
-        <li>
-            <div class="collapsible-style text-shadow collapsible-header"><i class="fas fa-chevron-circle-down"></i> First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-style text-shadow collapsible-header"><i class="fas fa-chevron-circle-down"></i> Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-style text-shadow collapsible-header"><i class="fas fa-chevron-circle-down"></i> Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% for workout in workouts %}
+            <li>
+                <div class="collapsible-style text-shadow collapsible-header"><i class="fas fa-chevron-circle-down"></i><strong>{{ workout.workout_name }}</strong> : {{ workout.date }}
+                {% if workout.is_important == "on" %}
+                    <i class="fas fa-exclamation-triangle prefix grey-text text-darken-3 tooltipped" data-postion="right" data-tooltip="IMPORTANT!"></i>
+                {% endif %}
+                </div>
+                <div class="collapsible-body">
+                    <strong>Type: {{ workout.workout_name}} </strong>
+                    <p>Instructions: {{ workout.workout_instructions }}</p>
+                    <p>by: {{ workout.created_by}} </p>
+                </div>
+                
+            </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
