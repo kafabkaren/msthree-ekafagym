@@ -1,6 +1,6 @@
 # eKafaGym Web App
 
-Welcome to [KafaGym](https://ekafagym.herokuapp.com/)
+Welcome to [eKafaGym](https://ekafagym.herokuapp.com/)
 
 ![MS1Responsivenes]()
 

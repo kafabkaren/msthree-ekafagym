@@ -152,6 +152,19 @@ def get_workout_plans():
     return render_template("workout_plans.html", workout_plans=workout_plans)
 
 
+@app.route("/add_workout_plan", methods=["GET", "POST"])
+def add_workout_plan():
+    if request.method == "POST":
+        workout = {
+            "workout_plan_name": request.form.get("workout_plan_name")
+        }
+        mongo.db.workout_plans.insert_one(workout)
+        flash("Category Created!")
+        return redirect(url_for("get_workout_plans"))
+
+    return render_template("add_workout_plan.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
