@@ -22,6 +22,12 @@ body {
     margin: 3px;
 }
 
+.cancel {
+    color: #f44336;
+    background-color: #4B4D4F;
+    margin: 3px;
+}
+
 .btn-workout {
     color: #fafafa;
     background-color: #F7941E;

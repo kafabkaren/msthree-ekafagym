@@ -9,9 +9,13 @@
                 <!-- choosing workout -->
                 <div class="input-field col s12"><i class="fas fa-folder-open prefix grey-text text-darken-3"></i>
                     <select id="workout_plan_name" name="workout_plan_name" class="validate" required>
-                        <option value="" disabled selected>Choose your Workout Plan</option>
+                        <option value="" disabled>Choose your Workout Plan</option>
                         {% for workout_plan in workout_plans %}
-                            <option value="{{ workout_plan.workout_plan_name }}">{{ workout_plan.workout_plan_name }}</option>
+                            {% if workout_plan.workout_plan_name == workout.workout_plan_name %}
+                                <option value="{{ workout_plan.workout_plan_name }}" selected>{{ workout_plan.workout_plan_name }}</option>
+                            {% else %}
+                                <option value="{{ workout_plan.workout_plan_name }}">{{ workout_plan.workout_plan_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="workout_plan_name">Workout Plan</label>
@@ -20,7 +24,7 @@
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-dumbbell prefix grey-text text-darken-3"></i>
-                <input id="workout_name" name="workout_name" minlength="5" maxlength="40" type="text" class="validate" required>
+                <input id="workout_name" name="workout_name" minlength="5" maxlength="40" value="{{ workout.workout_name }}" type="text" class="validate" required>
                 <label for="workout_name">Workout Name</label>
                 </div>
             </div>
@@ -28,7 +32,9 @@
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-clipboard-list prefix grey-text text-darken-3"></i>
-                <textarea id="workout_instructions" name="workout_instructions" minlength="5" maxlength="250" class="materialize-textarea validate" required></textarea>
+                <textarea id="workout_instructions" name="workout_instructions" minlength="5" maxlength="250" class="materialize-textarea validate" required>
+                {{- workout.workout_instructions -}}
+                </textarea>
                 <label for="workout_instructions">Workout Instructions</label>
                 </div>
             </div>
@@ -36,7 +42,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix grey-text text-darken-3"></i>
-                    <input id="date" name="date" type="text" class="datepicker validate" required>
+                    <input id="date" name="date" value="{{ workout.date }}" type="text" class="datepicker validate" required>
                     <label for="date">Date</label>
                 </div>
             </div>
@@ -46,7 +52,11 @@
                     <div class="switch">
                         <i class="fas fa-exclamation-triangle prefix grey-text text-darken-3"></i>
                         <label for="is_important">
-                                <input type="checkbox"  id="is_important" name="is_important">
+                                {% if workout.is_important == "on" %}
+                                    <input type="checkbox"  id="is_important" name="is_important" checked>
+                                {% else %}
+                                    <input type="checkbox"  id="is_important" name="is_important">
+                                {% endif %}
                                 <span class="lever"></span>
                                 Is Important
                             </label>
@@ -56,6 +66,8 @@
             <!-- submit -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!-- Edit cancel button -->
+                    <a href="{{ url_for('get_workouts') }}" class="btn cancel btn-large text-shadow"><b>Cancel</b> <i class="fas fa-window-close"></i></a>
                     <button type="submit" class="btn btn-large text-shadow"><b>Edit Workout</b> <i class="fas fa-user-edit"></i>
                     </button>
                 </div>
