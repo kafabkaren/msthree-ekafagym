@@ -6,10 +6,18 @@
     <ul class="collapsible">
         {% for workout in workouts %}
             <li>
-                <div class="collapsible-style text-shadow collapsible-header"><i class="fas fa-chevron-circle-down"></i><strong>{{ workout.workout_name }}</strong> : {{ workout.date }}
-                {% if workout.is_important == "on" %}
-                    <i class="fas fa-exclamation-triangle prefix grey-text text-darken-3 tooltipped" data-postion="right" data-tooltip="IMPORTANT!"></i>
-                {% endif %}
+                <div class="collapsible-style text-shadow collapsible-header">
+                    <div class="col s3">
+                        <i class="fas fa-chevron-circle-down"></i>
+                        <a class="waves-effect waves-light btn btn-workout">Edit</a>
+                        <a class="waves-effect waves-light btn btn-workout">Done</a>   
+                    </div>
+                    <div class="col s9">
+                        <strong>{{ workout.workout_name }}</strong> : {{ workout.date }}
+                        {% if workout.is_important == "on" %}
+                        <i class="fas fa-exclamation-triangle prefix grey-text text-darken-3 tooltipped" data-postion="right" data-tooltip="IMPORTANT!"></i>
+                        {% endif %}
+                    </div>
                 </div>
                 <div class="collapsible-body">
                     <strong>Type: {{ workout.workout_name}} </strong>
