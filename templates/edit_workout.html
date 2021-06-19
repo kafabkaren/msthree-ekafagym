@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h4 class="titles text-darken-2 center-align text-shadow">Edit Workout</h4>
+
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="{{ url_for('edit_workout', workout_id=workout._id) }}">
+            <div class="row">
+                <!-- choosing workout -->
+                <div class="input-field col s12"><i class="fas fa-folder-open prefix grey-text text-darken-3"></i>
+                    <select id="workout_plan_name" name="workout_plan_name" class="validate" required>
+                        <option value="" disabled selected>Choose your Workout Plan</option>
+                        {% for workout_plan in workout_plans %}
+                            <option value="{{ workout_plan.workout_plan_name }}">{{ workout_plan.workout_plan_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="workout_plan_name">Workout Plan</label>
+                </div>
+            <!-- workout name -->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-dumbbell prefix grey-text text-darken-3"></i>
+                <input id="workout_name" name="workout_name" minlength="5" maxlength="40" type="text" class="validate" required>
+                <label for="workout_name">Workout Name</label>
+                </div>
+            </div>
+            <!-- workout description -->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-clipboard-list prefix grey-text text-darken-3"></i>
+                <textarea id="workout_instructions" name="workout_instructions" minlength="5" maxlength="250" class="materialize-textarea validate" required></textarea>
+                <label for="workout_instructions">Workout Instructions</label>
+                </div>
+            </div>
+            <!-- due date picker -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix grey-text text-darken-3"></i>
+                    <input id="date" name="date" type="text" class="datepicker validate" required>
+                    <label for="date">Date</label>
+                </div>
+            </div>
+            <!-- is important toggle -->
+            <div class="row">
+                <div class="input-field col 12">
+                    <div class="switch">
+                        <i class="fas fa-exclamation-triangle prefix grey-text text-darken-3"></i>
+                        <label for="is_important">
+                                <input type="checkbox"  id="is_important" name="is_important">
+                                <span class="lever"></span>
+                                Is Important
+                            </label>
+                    </div>
+                </div>
+            </div>            
+            <!-- submit -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn btn-large text-shadow"><b>Edit Workout</b> <i class="fas fa-user-edit"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

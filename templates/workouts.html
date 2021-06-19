@@ -9,7 +9,7 @@
                 <div class="collapsible-style text-shadow collapsible-header">
                     <div class="col s3">
                         <i class="fas fa-chevron-circle-down"></i>
-                        <a class="waves-effect waves-light btn btn-workout">Edit</a>
+                        <a href="{{ url_for('edit_workout', workout_id=workout._id) }}" class="waves-effect waves-light btn btn-workout">Edit</a>
                         <a class="waves-effect waves-light btn btn-workout">Done</a>   
                     </div>
                     <div class="col s9">

@@ -118,6 +118,14 @@ def add_workout():
     return render_template("add_workout.html", workout_plans=workout_plans)
 
 
+@app.route("/edit_workout/<workout_id>", methods=["GET", "POST"])
+def edit_workout(workout_id):
+    workout = mongo.db.workouts.find_one({"_id": ObjectId(workout_id)})
+
+    workout_plans = mongo.db.workout_plans.find().sort("workout_plan_name", 1)
+    return render_template("edit_workout.html", workout=workout, workout_plans=workout_plans)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
