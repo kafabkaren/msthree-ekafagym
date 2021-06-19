@@ -146,6 +146,12 @@ def delete_workout(workout_id):
     return redirect(url_for("get_tasks"))
 
 
+@app.route("/get_workout_plans")
+def get_workout_plans():
+    workout_plans = list(mongo.db.workout_plans.find().sort("workout_plan_name", 1))
+    return render_template("workout_plans.html", workout_plans=workout_plans)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
