@@ -5,14 +5,16 @@
 
     <div class="row card-panel">
         <form class="col s12" method="POST" action="{{ url_for('add_workout_plan') }}">
+            <div class="row">
             <!-- workout plan name -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-folder-open prefix grey-text text-darken-3"></i>
-                        <input id="workout_plan_name" name="workout_plan_name" minlength="4" maxlength="20" type="text" class="validate" required>
-                        <label for="workout_plan_name">Workout Plan Name</label>
-                    </div>
-                </div>      
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix grey-text text-darken-3"></i>
+                <input id="workout_plan_name" name="workout_plan_name" minlength="5" maxlength="20" type="text" class="validate" required>
+                <label for="workout_plan_name">Workout Plan Name</label>
+                </div>
+            </div>
+            </div>          
             <!-- submit -->
             <div class="row">
                 <div class="col s12 center-align">
