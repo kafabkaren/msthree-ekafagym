@@ -22,10 +22,22 @@ body {
     margin: 3px;
 }
 
+.btn:hover {
+    color: #F7941E;
+    background-color: #5f5f5f;
+    font-weight: bold;
+}
+
 .cancel {
     color: #f44336;
     background-color: #4B4D4F;
     margin: 3px;
+}
+
+.cancel:hover {
+    color: #f44336;
+    background-color: #4B4D4F;
+    font-weight: bold;
 }
 
 .btn-workout {
@@ -37,12 +49,6 @@ body {
     margin: 3px;
     line-height: 42px;
 
-}
-
-.btn:hover {
-    color: #F7941E;
-    background-color: #5f5f5f;
-    font-weight: bold;
 }
 
 .titles {
