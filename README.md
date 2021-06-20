@@ -1,28 +1,29 @@
 # Guess The Number
 
-Welcome to [eKafagym Webb App](https://ekafagym.herokuapp.com/get_workouts)
+Welcome to [eKafagym Web App](https://ekafagym.herokuapp.com/get_workouts)
 
-![MS3 Responsiveness.JPG](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/images/MS2%20Responsiveness.JPG)
+![MS3 Responsiveness.JPG](https://github.com/kafamem/msthree-ekafagym/blob/master/static/images/MS3%20Responsiveness.JPG)
 
 ## Project rationale
 
-This website is designed to help users play by guessing the hidden number. The game consists of guessing the hidden number by type in the guess one ranging between 1 and 20. Then, check if the input is correct.<br>
+This web app was designed to help the Kafagym members be able to plan for their workouts. This is done by creating, reading, editing, and even being able delete their workouts as a reference while training.<br>
 
 
 # User Experience (UX)
 
 It has been designed in such way that its visitors will be able to navigate the 
-web features easily and with help of simple but clean colour combination and game typography. 
+web app features easily and with help of simple but clean colour combination. 
 
 ## User stories<br>
 <ul>
-    <li>As a user, I want to be able to navigate the page easily.</li>
-    <li>As a user, I want to type in my guessing number.</li>
-    <li>As a user, I want to be able to check the correctness of the number I entered.</li>
-    <li>As a user, I want a feedback after checking my number.</li>
-    <li>As a user, I want to know how many attempts I still have remaining to score for each guess and see my top score.</li>
-    <li>As a user, I want to be able to start the game without losing my current top score.</li>
-    <li>As a user, I want to be able to restart the game from scratch.</li>
+    <li>A user needs to be able to navigate the web app pages with ease on different devices.</li>
+    <li>A user needs to be able to sign up and in to able to use the web app.</li>
+    <li>An anonymous user should not be able to add/edit/delete any workout or profile.</li>
+    <li>An anonymous user should not be able to view other users' profile.</li>
+    <li>Admin of the platform should be able to add/edit/delete any workout and manage the workout plans.</li>
+    <li>A user should be able to add/edit/delete any workout or profile.</li>
+    <li>A user should not be able to add/edit/delete any workout of other users.</li>
+    <li>An anonymous user should not be able to search the added workout.</li>
 </ul> 
 
 ### Design<br>
@@ -49,6 +50,25 @@ The wireframes for the site were created with help of Balsamiq. They feature the
 ## Features
 
 ### Existing Features
+
+Feature | Action Taken | Expected Results | Pass/ Fail |
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+Nabbar | 301 | 283 | 290 | 
+
 <ul>
 The site layout consists of three main areas:<br><br>
     <li>The header that shows the name and the purpose of the site.</li><br>
