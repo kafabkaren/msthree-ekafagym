@@ -11,8 +11,8 @@
                             <span class="card-title">{{ workout_plan.workout_plan_name }}</span>
                         </div>
                         <div class="card-action">
+                            <a href="{{ url_for('edit_workout_plan', workout_plan_id=workout_plan._id) }}" class="btn"><b>Edit</b></a>
                             <a href="#" class="btn"><b>Remove</b></a>
-                            <a href="#" class="btn"><b>Edit</b></a>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col s12 center-align">
                 <a href="{{ url_for('add_workout_plan') }}" class="btn btn-large text-shadow">
-                   <b>Add Category</b> <i class="fas fa-plus-square right"></i>
+                   <b>Add Workout Plan</b> <i class="fas fa-plus-square right"></i>
                 </a>
             </div>
         </div>

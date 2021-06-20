@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h4 class="titles text-darken-2 center-align text-shadow">Add Workout Plan</h4>
+    <h4 class="titles text-darken-2 center-align text-shadow">Edit Workout Plan</h4>
 
     <div class="row card-panel">
-        <form class="col s12" method="POST" action="{{ url_for('add_workout_plan') }}">
-            <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('edit_workout_plan', workout_plan_id=workout_plan._id) }}">
             <!-- workout plan name -->
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix grey-text text-darken-3"></i>
-                <input id="workout_plan_name" name="workout_plan_name" minlength="5" maxlength="20" type="text" class="validate" required>
+                <input id="workout_plan_name" name="workout_plan_name" minlength="5" maxlength="20" type="text" value="{{ workout_plan.workout_plan_name }}" class="validate" required>
                 <label for="workout_plan_name">Workout Plan Name</label>
                 </div>
-            </div>
-            </div>          
+            </div>      
             <!-- submit -->
             <div class="row">
                 <div class="col s12 center-align">
-                    <button type="submit" class="btn btn-large text-shadow"><b>Add Workout Plan</b> <i class="fas fa-plus-square"></i>
+                    <a href="{{ url_for('get_workout_plans') }}" class="cancel text-shadow" >
+                        Cancel <i class="fas fa-window-close"></i>
+                    </a>
+                    <button type="submit" class="btn btn-large text-shadow"><b>Edit Workout Plan</b> <i class="fas fa-user-edit"></i></i>
                     </button>
                 </div>
             </div>

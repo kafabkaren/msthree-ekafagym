@@ -108,7 +108,7 @@ def add_workout():
             "workout_instructions": request.form.get("workout_instructions"),
             "is_important": is_important,
             "date": request.form.get("date"),
-            "creaded_by": session["member"]
+            "created_by": session["member"]
         }
         mongo.db.workouts.insert_one(workout)
         flash("Workout Added!")
@@ -143,7 +143,7 @@ def edit_workout(workout_id):
 def delete_workout(workout_id):
     mongo.db.workouts.remove({"_id": ObjectId(workout_id)})
     flash("Workout Deleted!")
-    return redirect(url_for("get_tasks"))
+    return redirect(url_for("get_workouts"))
 
 
 @app.route("/get_workout_plans")
@@ -159,11 +159,16 @@ def add_workout_plan():
             "workout_plan_name": request.form.get("workout_plan_name")
         }
         mongo.db.workout_plans.insert_one(workout)
-        flash("Category Created!")
+        flash("Workout Plan Created!")
         return redirect(url_for("get_workout_plans"))
 
     return render_template("add_workout_plan.html")
 
+
+@app.route("/edit_workout_plan/<workout_plan_id>", methods=["GET", "POST"])
+def edit_workout_plan(workout_id):
+    workout_plan = mongo.db.workouts.find_one({"_id": ObjectId(workout_id)})
+    return render_template("edit_workout_plan.html", workout_plan=workout_plan)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
