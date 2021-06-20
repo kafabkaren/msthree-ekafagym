@@ -1,75 +1,69 @@
-# eKafaGym Web App
+# Guess The Number
 
-Welcome to [eKafaGym](https://ekafagym.herokuapp.com/)
+Welcome to [eKafagym Webb App](https://ekafagym.herokuapp.com/get_workouts)
 
-![MS1Responsivenes]()
+![MS3 Responsiveness.JPG](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/images/MS2%20Responsiveness.JPG)
 
 ## Project rationale
 
-The KafaGym project aimed at creating a website for business that targets gym members as site's users.
-The main idea is to provide potential members with the needed information to better know 
-about the gym and what are the procedures. These procedures involve becoming members and get to 
-know how the gym works.
+This website is designed to help users play by guessing the hidden number. The game consists of guessing the hidden number by type in the guess one ranging between 1 and 20. Then, check if the input is correct.<br>
 
-Therefore, at KafaGym our interest is to attract members and retain them through the provision of a better service as documented on the website.<br>
 
-## User Experience (UX)
+# User Experience (UX)
 
-The website seeks to attract potential members at KafaGym. It has been designed in such way that its visitors will be able to navigate the 
-the content easily and with help of eye catching features to attract their attention hence motivate their participation.
+It has been designed in such way that its visitors will be able to navigate the 
+web features easily and with help of simple but clean colour combination and game typography. 
 
-### User stories<br>
+## User stories<br>
 <ul>
-    <li>First Time User Goal</li><br>
-    a. As a first time user to the KafaGym site, I want to have information on the gym services and procedures.<br>
-    b. As a first time user to the KafaGym site, I want to explore more about the site content through navigation.<br><br>
-    <li>Regular users</li><br>
-    a. As a regular user, I want to book a training session with an instructor at KafaGym through logging in my account<br>
-    b. As a regular user, I want to access the eKafaGym app to track my last performance at gym so I can improve today.<br>
-    c. As a first time user to the KafaGym site, I want to be able to sign up for membership and get in touch with organisation.<br>
-    <li>Returning user</li><br>
-    a. As a returning user, I want to find out about training groups and their community links.<br>
-    b. As a returning user, I want to get in touch with the KafaGym organisation with any questions I may need to ask.<br>
+    <li>As a user, I want to be able to navigate the page easily.</li>
+    <li>As a user, I want to type in my guessing number.</li>
+    <li>As a user, I want to be able to check the correctness of the number I entered.</li>
+    <li>As a user, I want a feedback after checking my number.</li>
+    <li>As a user, I want to know how many attempts I still have remaining to score for each guess and see my top score.</li>
+    <li>As a user, I want to be able to start the game without losing my current top score.</li>
+    <li>As a user, I want to be able to restart the game from scratch.</li>
 </ul> 
 
 ### Design<br>
+The web design main target is to provide the user with the ability to interact with the game. The layout consists of features and elements that allows the user to navigate and use the interact with the game. 
 <ul>
     <li>Colour Scheme</li><br>
-    - Three main colours (white, orange and dark grey) were used throught the entire design process of the site. Their combination originated from the branding logo KafaGym
-    which is a gym logo from shutterstock customized to meet the KafaGym needs with help of Ai (Adobe Illustrator) where the coined word 'Kafa' was made out of two syllables <br>
-    word with 'Ka' standing for 'Karenzi' and 'Fa' standing for 'Fabrice'; the names of the site developer then the word gym.<br><br>
+    - The dominating color throughout the entire layout is dark grey which is combined with light grey color used for header and the instruction card area. In order to make the text content stand out, I used the orange color for typography which created a harmonious combination for both text and buttons background color.<br><br>
     <li>Typography</li><br>
-    - The Roboto font is the main font used for the entire website with Sans Serif as the backup font in case Roboto font does not respond correctly.<br>
-    The Roboto font looks nicer on web pages.<br><br>
-    <li>Imagery</li><br>
-    The site was designed with high resolution images to make it look attractive. The logo designed with help of Ai was <br>created with a transparent background
-    and is a vector based logo which makes it adjustable to various 'witdh' values without losing its original resolution.<br>
+    - The 'Press Start 2P' is the main font that was used while 'Sans Serif' was kept as backup font in case 'Press Start 2P' fails to respond effectively. The two typographies were fetched from google fonts. I found 'Press Start 2P' friendly for games design.<br><br>
+    <li>Emoji Icons</li><br>
+    - Five emoji icons were used in JavaScript code in order to accompany the user anticipated feelings upon guessing right or wrong in relation to the secret number and from the html 'Attempt' and 'Score' elements.<br>   
+
 </ul>
 
 ### Wireframes
-* Home Page Wireframe - [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/Landing%20page.png)
-* About Us Page Wireframe - [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/about-us%20-%20desktop%20%26%20mobile%20views.png)
-* Gallery Page Wireframe - [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/gallery%20-%20desktop%20%26%20mobile%20views.png)
-* Sports Page Wireframe - [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/sports%20-desktop%20%26%20mobile%20views.png)
-* Sign Up/In Page Wireframe - [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/sign%20up%20-%20desktop%20%26%20mobile%20views.png)
-* Contact Us Wireframe - [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/contact%20us%20-%20desktop%20%26%20mobile%20views.png)
+
+The wireframes for the site were created with help of Balsamiq. They feature the site look from different angles i.e computer, mobile phone and tablet views.
+
+* Guess The Number Computer View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Computer%20View.jpg)
+* Guess The Number Mobile Phone View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Mobile%20Phone%20View.jpg)
+* Guess The Number Tablet View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Tablet%20View.jpg)
 
 
 ## Features
 
 ### Existing Features
 <ul>
-    <li>The site is responsive on all device sizes.</li><br>
-    <li>Cards on home page are interactive upon hovering.</li><br>
-    <li>The eKafaGym app link on About Us page targets to function after learning about software develpment. For now, it only points to membership sign up page.</li><br>
+The site layout consists of three main areas:<br><br>
+    <li>The header that shows the name and the purpose of the site.</li><br>
+    <li>The game area which consits of secret number area where the hidden number is represented by the question mark. It is in this area where the guessed number shows up after a correct match. This styling in this regards also changes from 15rem for the initial and deafult settings to 30rem width after guessing right.<br>
+    <li>The input area serves for typing the number. The user can type in or scroll up and down to choose the number. Under this area, is the check button to submit the input for comparison and get the feedback. 
+    </li><br>
+    <li>The site also includes the 'Attempt' and 'Topscore' features. The Attempt feature which is a counting down from twenty down to zero, shows the user how many times they have tried to reach the perfect match. In case of failure i.e the last attempt equals to zero; then the 'You lost the game' message pops up. On the other hand, the Topscore feature keeps the highest score so far reached.</li><br>
+    <li>The 'Again' which is under the attempt and topscore features servers for starting the game session without losing track of the topscore. The game is to reset to the initial settings but keeping the topscore. However, upon refreshing the page the game will start from scratch.</li>
+    <li>The last area is the instruction which guide the user on how to play the game.</li>
 </ul>
 
 ### Features Left to implement
 <ul>
-    <li>Upon completing the JavaScript module, I hope to bring the site more to life through the design and use of interactive features.</li><br>
-    <li>The showcase background picture on home which is now fixed will be replaced by a JavaScript slider function to allow a quick scan of site content but at the same time creating an interactive site function.<br>
-    <li>JavaScript will all also intervene in creating an interchangeable sign up vs. log in functionalities. It should be noted that the sign up form and log in point to nowhere at this stage as there is a need for backend design to ensure a fully functional sign up and log in form.<br> 
-    <li>Contact us form does not go beyond what is displayed on Contact Us page as well since there is a need for backend design.<br>
+    <li>To better improve the game I plan to add on levels of difficulty where the user will be challenged to choose between easy and hard levels. To this level, the user may be provided with only a limited number of attempts to guess right with high score.</li><br>
+
 </ul>
 
 ## Technologies used
@@ -78,23 +72,22 @@ the content easily and with help of eye catching features to attract their atten
 
 * HTML5
 * CSS3
+* JavaScript
 
-### Framework, Libraries, Websites & Programs Used
+
+### Framework, Libraries, Websites & Tools Used
 
 1. [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/):
     - Bootstrap was used to ensure the responsiveness and styling of the website.
-1. [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free)
-    - Font Awesome was used to add attractive icons.
+
 1. [Google Fonts](https://fonts.google.com/)
     - Google fonts were used to import the 'Roboto and Sans-Serif' fonts used for typography.
-1. [jQuery](https://jquery.com/)
-    - jQuery was installed with Bootstrap to make the navbar responsive.
+
 1. [Git](https://git-scm.com/)
     - For version control, Git was used mainly to commit with help of Gitpod terminal and Push to GitHub.
 1. [GitHub](https://github.com/)
     - GitHub is used for storing the code pushed from Git.
-1. [Illustrator](https://www.adobe.com/ie/products/illustrator.html)
-    - Adobe Illustrator was used to create the logo.
+
 1. [Balsamiq](https://balsamiq.com/)
     - Balsamiq was used to create the website home page [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/Landing%20page.png) during the design process.
 1. [Befunky](https://www.befunky.com/create/resize-image/)
@@ -102,46 +95,40 @@ the content easily and with help of eye catching features to attract their atten
 1. [ColorZilla](https://www.colorzilla.com/)
     - ColorZilla was such a handy extension used to pick the appropriate hexadecimal during the design process.
 
-## Testing
+## Validation
 
 In order to check the validity of the website code, the W3C Markup Validator and W3C CSS Validator were used on each page of the website to check the syntax errors.
-* https://validator.w3.org/
-* https://jigsaw.w3.org/css-validator/
+* [HTML Validator](https://validator.w3.org/) returned zero errors in the markup.
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) returned zero errors in the styling.
+* [JavaScript Validator](https://jshint.com/) returned five warnings but no errors were identified. 
+
+## Compatibility Testing
+
+The site is compatible with different devices including mobile and tablet as well as computer. The responsiveness aspect was regularly checked using Google Chrome inspect features without forgetting Safari and Mozilla Firefox.
 
 ### Testing User Stories from User Experience (UX)
-1. First Time User Goal
-   1. As a user to the KafaGym site, I want to have information on the gym services and procedures.
-        - Once the website home page is opened, a welcoming page with different sections is displayed. There is navigation bar that includes the KafaGym logo and the links leading to various pages.
-        - The showcase image welcomes the user via the gym slogan and button link calling the user to become a member by click the Getting Started button pointing to the sign up page.
-        - The user can also find out more about the sport types that are offered by clicking 'Learn more' on each of these found under Our programs (card area).
-        * Easy navigation of the content - [screenshot](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/homepage-showcase-user-story.jpg)
 
-   1. As a first time user to the KafaGym site, I want to explore more about the site content through navigation.
-        - The website layout is clear and simple to navigate. The navigation links make it easier for the user to know what kind of content expected upon clicking them.
-        - The card area give a quick piece of information about each sport type while the footer provides the information about the gym location, opening hours as well as the subscription to newsletter.
-   1. As a first time user to the KafaGym site, I want to be able to sign up for membership and get in touch with organisation. 
-        - The site provides options for sign up for potential members under the link 'Sign Up/In'. However, the form does not go beyond as it is not yet linked with the back end functionalities. User can also contact the organisation by filling 
-          the 'Contact Us' form under the link 'Contact Us'; this is yet to be linked to the backend functionalities as well.
-        * Membership subscription - [screenshot](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/membership-subscription.jpg)
-1. Regular User
-    1. As a regular user, I want to book a training session with an instructor at KafaGym through logging in my account
-        - Regular users will have the options to log in and book sessions after the creation of login form.
-    1. The developer anticipates to create an app that will help gym members to track their training progress.
-1. Returning user
-    1. As a returning user, I want to find out about training groups and their community links.
-        - The site provides social links that will allow the gym community to stay connected and at the same increasing the gym visibility.
-        * Community links - [screenshot](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/community-links.jpg)
-    1. As a returning user, I want to get in touch with the KafaGym organization with any questions I may need to ask.<br>
-        - The site provides its user with the possibility to communicate with the gym organization via contact form.
-        * Interaction with organization - [screenshot](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/interaction-with-organization.jpg)
+As a user and the plater at same time of the game on the website, I want to:
+<ul>
+    <li>Navigate the page easily.</li><br>
+    The page layout makes it easier to navigate around. The features on the web page are straightforward to find and get along with with ease.<br><br>
+    <li>Type in my guessing number.</li><br>
+    The user is provided with the field to enter their prefered number as guess. The user can either type or scroll up or down to select the prefered number.<br><br>
+    <li>To be able to check the correctness of the number I entered.</li><br>
+    The user check whether their prefered guess number matched or did not match with the hidden secret number. This is done upon clicking the 'Check' button which prompts a feedback. The correct match appears both in the secret number box and the typing box.<br><br>
+    <li>Get feedback after checking my number.</li><br>
+    Upon clicking the Check button, the user gets a feedback with the phrase 'Wow! Exact number' in case the match was correct, the phrase 'The number is low' in case the number entered  is lower than the secret number and the phrase 'The number is high' in case the number entered is higher than the secret number. The user can also get a failure notification 'You lost the game' after exhausting the counting down attempts with no correct guess.<br><br>
+    <li>Know how many attempts still available to score for each guess and see my top score.</li><br>
+    The user is provided with the information about how many attempts were tried in a form of counting down as well as the top score reahced so far. Here the topscore is actually equal to the highest value number from the attempts. With this information, the user can strategically plan for the next score.<br><br>
+    <li>To start the game without losing my current top score.</li><br>
+    For the purpose of competition, the user may need to show off the topscore they reached but without losing the ability to keep playing. In this case, the 'Again' button was set to start the game again without losing track of the topscore.<br><br>
+    <li>Restart over the game.</li><br>
+    The user can choose to start over the entire game session by refreshing the page. This will reset all game features back to the starting point; topscore included. 
+</ul>
 
 ### Further Testing
 * The website was tested through different browsers; Google Chrome, Mozilla Firefox, Microsoft Edge and Safari browsers.
 * The website was viewed through various devices including iPhone7 and iPad, large screen and laptop to check it responsiveness.
-* Pages were tested to ensure that they function correctly in order to allow an effective the navigation. The back and next buttons respond correctly on the website.
-
-### Known Bugs
-* Due to time constraints, the sport page under the link 'Sports' was not styled as I wanted it to appear though it's fully functional.
 
 ## Deployment
 
@@ -155,25 +142,19 @@ The following steps were followed to deploy the project to GitHub Pages:
 1. The page will automatically refresh.
 1. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
-### Gitpod workspace
-In order to deal with coding, I use Gitpod workspace. 
-1. After logging in to Gitpod, I choose the 'kafamem/msone-kafagym' workspace.
-1. Then I click 'Start' button adjacent to the workspace name. Then the workspace name opens the project design interface. This has terminals, coding area as well as the preview mode.
+### Workspace
+In order to write wode, I use Gitpod IDE. 
+1. After logging in to Gitpod, I choose the 'kafamem/mstwo-guess-the-number' workspace.
+1. Then, I select open from adjacent three dots. Then the workspace name opens the project design interface. This has terminals, coding area as well as the preview mode.
 
 ## Credits
 
 ### code
 * [Bootstrap4](https://getbootstrap.com/docs/4.1/getting-started/introduction/): Bootstrap Library was used to ensure the responsiveness of the website.
-* The entire gallery page code to was added bootstrap was copied from [W3schools](https://www.w3schools.com/) but customized to meet the requirements of the website design.
-* The about us page design idea was from Traversy Media tutorials via Acme Web Design project.
+
 ### content
 * All the text content was written by the developer.
-### Media
-* The photos used in this project were downloaded from [Shutterstock](https://www.shutterstock.com/), resized and retouched to meet the website needs.
+
 ### Acknowledgements
-* My mentor for her helpful guidance.  
-* Tutor support at Code Institute their technical intervention.
-* I was inspired by a number of projects:
-  * [Templatemonsterpreview](https://www.templatemonsterpreview.com/demo/58939.html) for layout idea.
-  * Beyond Bootstrap lecture as mini project from Code Insitute.
-  * Traversy Media Tutorials.
+* My mentor for his technical guidance.  
+* Tutor support at Code Institute their technical support.
