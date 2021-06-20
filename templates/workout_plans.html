@@ -12,7 +12,7 @@
                         </div>
                         <div class="card-action">
                             <a href="{{ url_for('edit_workout_plan', workout_plan_id=workout_plan._id) }}" class="btn"><b>Edit</b></a>
-                            <a href="#" class="btn"><b>Remove</b></a>
+                            <a href="{{ url_for('remove_workout_plan', workout_plan_id=workout_plan._id) }}" class="btn"><b>Remove</b></a>
                         </div>
                     </div>
                 </div>
