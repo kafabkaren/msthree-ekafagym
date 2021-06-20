@@ -166,8 +166,17 @@ def add_workout_plan():
 
 
 @app.route("/edit_workout_plan/<workout_plan_id>", methods=["GET", "POST"])
-def edit_workout_plan(workout_id):
-    workout_plan = mongo.db.workouts.find_one({"_id": ObjectId(workout_id)})
+def edit_workout_plan(workout_plan_id):
+    if request.method == "POST":
+        submit = {
+            "workout_plan_name": request.form.get("workout_plan_name")
+        }
+        mongo.db.workout_plans.update(
+            {"_id": ObjectId(workout_plan_id)}, submit)
+        flash("Workout Plan Updated!")
+        return redirect(url_for("get_workout_plans"))
+        
+    workout_plan = mongo.db.workout_plans.find_one({"_id": ObjectId(workout_plan_id)})
     return render_template("edit_workout_plan.html", workout_plan=workout_plan)
 
 if __name__ == "__main__":
