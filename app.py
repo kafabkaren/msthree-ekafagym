@@ -21,7 +21,14 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_workouts")
 def get_workouts():
-    workouts = mongo.db.workouts.find()
+    workouts = list(mongo.db.workouts.find())
+    return render_template("workouts.html", workouts=workouts)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    workouts = list(mongo.db.workouts.find({"$text": {"$search": query}}))
     return render_template("workouts.html", workouts=workouts)
 
 
