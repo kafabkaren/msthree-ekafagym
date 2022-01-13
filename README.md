@@ -125,6 +125,13 @@ As a user and the plater at same time of the game on the website, I want to:
     
 </ul>
 
+
+## Backend 
+
+Users must have an account to create workouts so there is a users collection that has username and password as keys of the data. username in users collections is linked with the username in workouts collection because users who have an account can only create workout and they create workout in their own account. Same logic applies as username in users collection that users can only create workout for the categories available in a categories collection so it is liked with workout_plan in workouts collection. Only admin can edit categories in categories collection so it was created as an independent collection. The data in all the collections are retrievable and can be identified by the key or unique id of the object.
+
+* [eKafagym DB](https://github.com/kafamem/msthree-ekafagym/blob/master/static/images/eKafagym_DB.jpg)
+
 ### Further Testing
 * The website was tested through different browsers; Google Chrome, Mozilla Firefox, Microsoft Edge and Safari browsers.
 * The website was viewed through various devices including iPhone7 and iPad, large screen and laptop to check it responsiveness.
