@@ -67,7 +67,7 @@ def signin():
         if existing_member:
             # check if hashed password matches member input
             if check_password_hash(
-                existing_member["password"], request.form.get("password")):
+                    existing_member["password"], request.form.get("password")):
                     session["member"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(url_for(
@@ -143,7 +143,8 @@ def edit_workout(workout_id):
 
     workout = mongo.db.workouts.find_one({"_id": ObjectId(workout_id)})
     workout_plans = mongo.db.workout_plans.find().sort("workout_plan_name", 1)
-    return render_template("edit_workout.html", workout=workout, workout_plans=workout_plans)
+    return render_template(
+        "edit_workout.html", workout=workout, workout_plans=workout_plans)
 
 
 @app.route("/delete_workout/<workout_id>")
@@ -155,7 +156,8 @@ def delete_workout(workout_id):
 
 @app.route("/get_workout_plans")
 def get_workout_plans():
-    workout_plans = list(mongo.db.workout_plans.find().sort("workout_plan_name", 1))
+    workout_plans = list(
+        mongo.db.workout_plans.find().sort("workout_plan_name", 1))
     return render_template("workout_plans.html", workout_plans=workout_plans)
 
 
