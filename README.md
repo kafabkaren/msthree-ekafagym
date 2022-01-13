@@ -49,25 +49,22 @@ The wireframes for the site were created with help of Balsamiq. They feature the
 
 ### Existing Features
 
-Feature | Action Taken | Expected Results | Pass/ Fail |
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Navbar logo | Click home | Leads to homepage | Pass | 
-Logo Profie page | Click home | Leads to homepage | Fail |
-Nabbar Home | Click home | Leads to homepage | Pass 
-Sign In link | Click Sign in | Sign In form   | Pass | 
-Sign Up link | Click Sign up | Sign Up form   | Pass |
-Profile link | Click Profile link| Profile page | Pass |
-Add Workout link | Click add Workout | Create workout form   | Pass |
-Workout Plans btn | Click Workout Plans | Create Workout Plan   | Pass | 
-Workout Plans btn | Click Workout Plans | Update Workot Plan   | Pass |
-Add Workout link | Click add Workout | Update workout form   | Pass |
-Add Workout link | Click add Workout | Read workout form   | Pass |
-Workout Plans btn | Click Workout Plans | Read Workout Plan   | Pass |
-Workout Plans btn | Click Workout Plans | Read Workout   | Pass | 
-Workout Plans btn | Click Workout Plans | Delete Workout Plan   | Pass |
-Workout Plans btn | Click Workout Plans | Delete Workout   | Pass | 
-Searching function | Click home | Render Results | Pass |
-Searching non exsisting entry | Click home | Display Error message | Pass | 
+| Feature       | Feasibility   | Importance  | 
+| ------------- | ------------- | ------------- |
+| Navbar logo  | 5 | 5 |
+| Logo Profie page  | 5  | 5  |
+| Navbar Home  | 5 | 5  |
+| Sign In link  | 5 | 5  |
+| Sign Up link  | 5 | 5  |
+| Profile link  | 5  | 5  |
+| Add Workout link | 5  | 5  |
+| Workout Plans btn  | 5 | 5  |
+| Add Workout link  | 5  | 5  |
+| Workout Plans btn  | 5  | 5  |
+| Searching function  | 5  | 5  |
+| Add, Update, Edit, Remove workout (Admin only)  | 5 | 5  |
+| Add, Update, Edit, Remove workout plan (Admin only)  | 5 | 5  |
+| Add, Update, Edit, Remove workout (registered user)  | 5 | 5  |
 
 ## Technologies used
 
